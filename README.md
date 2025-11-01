@@ -1,4 +1,4 @@
-![](https://github.com/user-attachments/assets/e449acf0-d701-457a-97ae-c71e3e916bc6)
+<img src="assets/nombre.gif" width="100%">
 
 
 
