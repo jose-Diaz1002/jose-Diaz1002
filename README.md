@@ -1,15 +1,5 @@
-<div className="mb-6 flex justify-center">
-              <video
-                autoPlay
-                // loop
-                muted
-                playsInline
-                className="w-full max-w-2xl h-auto" ![Starting_with_this_202511010211](https://github.com/user-attachments/assets/c003a949-9987-4be4-99cf-41e6c7af18ee)
+![Starting_with_this_202511010211](https://github.com/user-attachments/assets/e449acf0-d701-457a-97ae-c71e3e916bc6)
 
-              >
-                <source src="/videos/nombreCodigo.mp4" type="video/mp4" />
-              </video>
-            </div>
 
 
 <div align="center">
