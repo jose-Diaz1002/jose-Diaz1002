@@ -1,3 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Nombre de código</title>
+<style>
+  html,body{height:100%;margin:0;background:#020;overflow:hidden}
+  canvas{display:block}
+  #hint{position:fixed;left:12px;top:12px;color:#0f0;font-family:monospace}
+</style>
+</head>
+<body>
+<div id="hint">Jose Luis Diaz I — lluvia de código</div>
+<canvas id="c"></canvas>
+<script>
+const phrase = "Jose Luis Diaz I";
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+let W, H;
+function resize(){ W = canvas.width = innerWidth; H = canvas.height = innerHeight; prepareTargets(); }
+addEventListener('resize', resize);
+resize();
+
+// medir y colocar objetivos para cada caracter
+let targets = [];
+function prepareTargets(){
+  ctx.font = "bold 80px monospace";
+  const textWidth = ctx.measureText(phrase).width;
+  const startX = (W - textWidth) / 2;
+  const y = H/2 + 20;
+  targets = [];
+  let x = startX;
+  for (const ch of phrase) {
+    const w = ctx.measureText(ch).width;
+    targets.push({ch, x: x + w/2, y});
+    x += w;
+  }
+  spawnParticles();
+}
+
+let particles = [];
+function spawnParticles(){
+  particles = [];
+  for (let t of targets){
+    // varios caracteres por objetivo para efecto
+    const count = 6;
+    for(let i=0;i<count;i++){
+      particles.push({
+        ch: randomChar(),
+        x: Math.random()*W,
+        y: -Math.random()*H,
+        vx: (t.x - W/2)*0.0005 + (Math.random()-0.5)*0.6,
+        vy: 1 + Math.random()*3,
+        tx: t.x + (Math.random()-0.5)*12,
+        ty: t.y + (Math.random()-0.5)*6,
+        stuck: false,
+        speedMult: 0.9 + Math.random()*0.8
+      });
+    }
+  }
+}
+
+function randomChar(){
+  const s = "01{}[]();<>/\\|!@#$%^&*-_=+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  return s.charAt(Math.floor(Math.random()*s.length));
+}
+
+function step(){
+  ctx.fillStyle = "rgba(0,0,0,0.18)";
+  ctx.fillRect(0,0,W,H);
+  ctx.font = "18px monospace";
+  // dibujar partículas
+  for (let p of particles){
+    if (p.stuck) {
+      // cuando está pegado, mostrar el caracter objetivo (parte de la frase)
+      ctx.font = "bold 80px monospace";
+      ctx.fillStyle = "#6fef8a";
+      ctx.fillText(p.ch, p.tx - 24, p.ty + 10);
+      ctx.font = "18px monospace";
+      continue;
+    }
+    // física simple
+    p.vy += 0.08;
+    p.x += p.vx * p.speedMult;
+    p.y += p.vy * p.speedMult;
+    // si está cerca del objetivo, "snap"
+    const dx = p.tx - p.x, dy = p.ty - p.y;
+    if (Math.hypot(dx,dy) < 6 || p.y > H+50) {
+      p.stuck = true;
+      // para que muestre la letra correcta del nombre, tomamos la letra objetivo según posición x más cercana
+      p.ch = findTargetChar(p.tx);
+    }
+    ctx.fillStyle = "#0f0";
+    ctx.fillText(p.ch, p.x, p.y);
+  }
+
+  // detectar cuando la mayoría esté pegada: si >80% stuck, dibujar la frase final con brillo
+  const stuckCount = particles.filter(p=>p.stuck).length;
+  if (stuckCount > particles.length * 0.8){
+    ctx.font = "bold 96px monospace";
+    ctx.fillStyle = "rgba(120,255,160,0.95)";
+    const textWidth = ctx.measureText(phrase).width;
+    ctx.fillText(phrase, (W-textWidth)/2, H/2 + 32);
+    // efecto de pulsación
+    ctx.globalCompositeOperation = 'lighter';
+    ctx.fillStyle = "rgba(200,255,200,0.06)";
+    ctx.fillText(phrase, (W-textWidth)/2 - 2, H/2 + 32 -2);
+    ctx.globalCompositeOperation = 'source-over';
+  }
+
+  requestAnimationFrame(step);
+}
+
+function findTargetChar(tx){
+  // aproximar el caracter del objetivo más cercano por X
+  let best = targets[0], min = Infinity;
+  for (let t of targets){
+    const d = Math.abs(t.x - tx);
+    if (d < min){ min = d; best = t; }
+  }
+  return best.ch;
+}
+
+step();
+</script>
+</body>
+</html>
+
+
+
+
+
 <img src="assets/nombre.gif" width="100%">
 
 
