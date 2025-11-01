@@ -4,7 +4,7 @@
 
 <div align="center">
   
-# 👨‍💻 Jose Luis Diaz
+
 
 ### Backend Developer | Java & Spring Boot Specialist
 
