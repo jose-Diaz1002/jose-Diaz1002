@@ -21,26 +21,9 @@
 
 ## 🚀 Sobre Mí
 
-Profesional en transición al desarrollo backend tras **cuatro años de formación intensiva**. Especializado en **Java y Spring Framework**, con certificaciones en programación de sistemas informáticos y desarrollo web.
+Profesional en transición al desarrollo backend. Especializado en **Java y Spring Framework**, con certificaciones en programación de sistemas informáticos y desarrollo web.
 
 Mi reconversión profesional refleja mi **pasión genuina por la tecnología** y mi compromiso con el aprendizaje continuo y las buenas prácticas de desarrollo.
-
-\`\`\`java
-public class Developer {
-    private String name = "Jose Luis Diaz";
-    private String role = "Backend Developer";
-    private String[] languages = {"Java", "SQL", "JavaScript"};
-    private String location = "España";
-    
-    public String getCurrentFocus() {
-        return "Building scalable backend systems with Spring Boot";
-    }
-    
-    public boolean isOpenToWork() {
-        return true;
-    }
-}
-\`\`\`
 
 ---
 
