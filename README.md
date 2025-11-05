@@ -1,8 +1,8 @@
+<img src="assets/bannerGit.png" width="100%">
+
 <div align="center">
   
-# 👨‍💻 Jose Luis Diaz
-
-### Backend Developer | Java & Spring Boot Specialist
+Java & Spring Boot Specialist
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://josediaz.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jose-diaz-infante)
