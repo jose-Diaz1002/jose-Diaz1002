@@ -8,7 +8,7 @@
 
 ### Backend Developer | Java & Spring Boot Specialist
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-04815a?style=for-the-badge&logo=todoist&logoColor=white)](https://josediaz.vercel.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-449c4f?style=for-the-badge&logo=todoist&logoColor=white)](https://josediaz.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-059669?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jose-diaz-infante)
 
 
