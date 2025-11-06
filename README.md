@@ -9,7 +9,7 @@
 ### Backend Developer | Java & Spring Boot Specialist
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-34713b?style=for-the-badge&logo=todoist&logoColor=white)](https://josediaz.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-059669?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jose-diaz-infante)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-34713b?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jose-diaz-infante)
 
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=9333EA&center=true&vCenter=true&random=false&width=600&lines=Backend+Developer;Java+%26+Spring+Boot+Expert;Building+Scalable+APIs;Passionate+About+Clean+Code" alt="Typing SVG" />
