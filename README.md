@@ -1,4 +1,4 @@
-<img src="assets/bannerGit.png" width="100%">
+<img src="assets/bannerGit2.png" width="100%">
 
 
 
