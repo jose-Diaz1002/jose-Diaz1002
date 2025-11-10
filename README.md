@@ -16,20 +16,6 @@
 
 </div>
 
----
-
-## 🚀 Sobre Mí
-
-Especializado en **Java y Spring Framework**, con certificaciones en programación de sistemas informáticos y desarrollo web.
-
-Mi reconversión profesional refleja mi **pasión genuina por la tecnología** y mi compromiso con el aprendizaje continuo y las buenas prácticas de desarrollo.
-
-
-
-    
-
----
-
 ## 💻 Tech Stack
 
 ### Backend Development
@@ -56,6 +42,22 @@ Mi reconversión profesional refleja mi **pasión genuina por la tecnología** y
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ---
+
+
+---
+
+## 🚀 Sobre Mí
+
+Especializado en **Java y Spring Framework**, con certificaciones en programación de sistemas informáticos y desarrollo web.
+
+Mi reconversión profesional refleja mi **pasión genuina por la tecnología** y mi compromiso con el aprendizaje continuo y las buenas prácticas de desarrollo.
+
+
+
+    
+
+---
+
 
 ## 📊 GitHub Stats
 
